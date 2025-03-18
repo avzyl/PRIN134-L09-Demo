@@ -13,8 +13,8 @@
 <body>
   <div id="recipe-container" class="container">
     <h1 id="recipe-title">Chocolate Cake Recipe</h1>
-    <img id="cake" src="img/chocolate-cake.jpg" alt="Chocolate Cake" width="100%">
-    <h2 class="headers">Ingredients</h2>
+    <img id="cake" onclick="cakeFunction()" src="img/chocolate-cake.jpg" alt="Chocolate Cake" width="100%">
+    <h2 id="ingredients" onclick="ingFunction()" class="headers">Ingredients</h2>
     <ul id="recipe-ingredients">
       <li>1 cup all-purpose flour</li>
       <li>1 cup sugar</li>
@@ -28,7 +28,7 @@
       <li>1/2 tsp vanilla extract</li>
       <li>1/2 cup boiling water</li>
     </ul>
-    <h2 class="headers">Instructions</h2>
+    <h2 id="instructions" onclick="insFunction()" class="headers">Instructions</h2>
     <ol id="recipe-instructions">
       <li>Preheat oven to 350°F (175°C). Grease and flour a cake pan.</li>
       <li class="active">In a bowl, mix flour, sugar, cocoa powder, baking powder, baking soda, and salt.</li>
@@ -37,6 +37,10 @@
       <li>Pour batter into the cake pan and bake for 30-35 minutes.</li>
       <li>Let cool before serving. Enjoy!</li>
     </ol>
+
+    <button onclick="highlightIngredients()">Highlight Ingredients</button>
+    <button id="check-btn" onclick="checkInstructions()">Check Instructions</button>
+    <button onclick="resetInstructions()">Reset Instructions</button>
   </div>
 </body>
 
